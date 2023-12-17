@@ -1,18 +1,23 @@
+
+  enum CardTypes {
+    bastoni,
+    spade,
+    coppe,
+    denari
+  }
+
 public class Card{
     int value;
-    String type;
+    CardTypes type;
 
 
-    public Card(int CardValue, String CardType){
+    public Card(int CardValue, CardTypes CardType){
         //VALIDATE THE VALUES INSERTED BEFORE INSTANTIATING THE OBJECT
         if (CardValue < 1 || CardValue > 10) {
             System.out.println("Errore: Il valore della carta deve essere compreso tra 1 e 10. Carta non istanziata.");
             return; 
         }
-        if(CardType!="bastoni" && CardType!="spade" && CardType!="coppe" && CardType!="denari") {
-           System.out.println("Errore: Il tipo di carta inserito non è valido");
-           return;  
-        }
+        
         value=CardValue;
         type=CardType;
         String converted_value = String.valueOf(value);
@@ -27,14 +32,14 @@ public class Card{
   public int getValue() {
     return value;
   }
-  public String getType() {
+  public CardTypes getType() {
     return type;
   }
   //SETTERS
   public void setValue(int newValue) {
     this.value = newValue;
   }
-  public void setType(String newType) {
+  public void setType(CardTypes newType) {
     this.type = newType;
   }
 }
