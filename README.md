@@ -1,1 +1,1 @@
-Exercise 2nr2. refactoring of exercise 1 - Java cards OOP, to include enum functionality.
+Exercise nr2. refactoring of exercise 1 - Java cards OOP, to include enum functionality.
